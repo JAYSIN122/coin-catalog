@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Silver Dollar Collection | MS-62 and Higher</title>
+<style>
+:root{--navy:#14243f;--navy2:#1d3358;--gold:#c8963e;--gold2:#e2b867;--ink:#1a1f2b;--muted:#5c6577;--line:#e3e6ec;--bg:#f4f5f8}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.5}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:44px 20px 40px;border-bottom:4px solid var(--gold)}
+.wrap{max-width:1040px;margin:0 auto}
+.eyebrow{color:var(--gold2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:14px}
+h1{margin:8px 0 10px;font-size:clamp(28px,4.4vw,42px);line-height:1.15;letter-spacing:-.01em}
+.lede{margin:0;color:#d5dbe6;max-width:640px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:10px 16px}
+.stat b{display:block;font-size:24px;color:#fff}.stat span{font-size:13px;color:#c3cbd9;text-transform:uppercase;letter-spacing:.08em}
+main{padding:28px 20px 60px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:18px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button,.toggle{font:inherit;font-size:15px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--navy);padding:8px 14px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.toggle{border-radius:8px}
+.coin{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:14px;box-shadow:0 1px 2px rgba(20,36,63,.05);overflow:hidden;transition:box-shadow .2s}
+.coin[open]{box-shadow:0 8px 28px rgba(20,36,63,.12)}
+summary{list-style:none;display:flex;align-items:center;gap:18px;padding:14px 20px;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:#fafbfc}
+.thumb{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--line);flex:none}
+.head{flex:1;min-width:0;display:flex;flex-direction:column}
+.kicker{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.title{font-size:24px;font-weight:800;color:var(--navy);line-height:1.2}
+.sub{color:var(--muted);font-size:15px}
+.grade{flex:none;text-align:center;background:var(--navy);color:#fff;font-weight:800;font-size:20px;border-radius:10px;padding:6px 14px;min-width:96px}
+.glabel{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+.chev{flex:none;width:12px;height:12px;border-right:3px solid var(--navy);border-bottom:3px solid var(--navy);transform:rotate(45deg);margin:0 4px 6px;transition:transform .2s}
+.coin[open] .chev{transform:rotate(-135deg);margin-bottom:-4px}
+.body{padding:6px 22px 24px;border-top:1px solid var(--line)}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:18px 0}
+figure{margin:0}
+.zoom{all:unset;cursor:zoom-in;display:block;border-radius:10px;overflow:hidden;background:#111;aspect-ratio:1/1}
+.zoom:focus-visible{outline:3px solid var(--gold)}
+.zoom img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.zoom:hover img{transform:scale(1.03)}
+figcaption{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:600}
+dl{display:grid;grid-template-columns:180px 1fr;gap:10px 18px;margin:8px 0 14px}
+dt{font-weight:700;color:var(--navy)}dd{margin:0}
+dd.g{font-weight:800;color:var(--gold);font-size:20px}
+.note{font-style:italic;color:var(--muted);margin:4px 0}
+.email{display:inline-flex;align-items:center;gap:10px;margin-top:14px;background:var(--gold);color:#1a1205;text-decoration:none;font-weight:800;padding:13px 22px;border-radius:10px;font-size:17px;box-shadow:0 2px 0 #a57928}
+.email:hover{background:var(--gold2)}
+.email:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+footer{color:var(--muted);text-align:center;font-size:14px;padding:24px 20px 40px}
+footer a{color:var(--navy)}
+.lb{position:fixed;inset:0;background:rgba(8,14,26,.92);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:10;padding:20px}
+.lb.on{display:flex}.lb img{max-width:min(92vw,900px);max-height:82vh;border-radius:8px}
+.lb p{color:#fff;margin:12px 0 0;font-weight:600}
+.lb button{position:absolute;top:16px;right:20px;font:inherit;font-size:32px;background:none;border:0;color:#fff;cursor:pointer}
+@media (max-width:640px){summary{gap:12px;padding:12px 14px}.thumb{width:54px;height:54px}.title{font-size:20px}.grade{min-width:76px;font-size:17px;padding:5px 10px}dl{grid-template-columns:1fr;gap:2px}dt{margin-top:8px}.email{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow">Private Collection &middot; Sets A, B, C</div>
+  <h1>Morgan Silver Dollars, MS-62 and Higher</h1>
+  <p class="lede">Uncirculated silver dollars with photos of both sides, the estimated grade, and the grade evidence for each coin. Prices change with the market, so prices are given on request. Open any coin for details, then use the email button to ask for the current price.</p>
+  <div class="stats">
+    <div class="stat"><b>10</b><span>Coins shown</span></div>
+    <div class="stat"><b>1</b><span>MS-63</span></div>
+    <div class="stat"><b>9</b><span>MS-62</span></div>
+    <div class="stat"><b>On request</b><span>Prices</span></div>
+  </div>
+</div></header>
+<main><div class="wrap">
+  <div class="toolbar">
+    <div class="filters" role="group" aria-label="Filter by grade">
+      <button data-f="all" aria-pressed="true">All grades</button>
+      <button data-f="63" aria-pressed="false">MS-63</button>
+      <button data-f="62" aria-pressed="false">MS-62</button>
+    </div>
+    <button class="toggle" id="toggle">Expand all</button>
+  </div>
+  
+<details class="coin" data-grade="63" data-set="C" id="C-6">
+  <summary>
+    <img class="thumb" src="img/C-6-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set C &middot; Coin 6</span>
+      <span class="title">1881-S</span>
+      <span class="sub">Morgan Silver Dollar &middot; San Francisco Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-63</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/C-6-obverse.jpg" data-cap="1881-S MS-63 - Obverse" aria-label="Enlarge obverse"><img src="img/C-6-obverse.jpg" alt="1881-S obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/C-6-reverse.jpg" data-cap="1881-S MS-63 - Reverse" aria-label="Enlarge reverse"><img src="img/C-6-reverse.jpg" alt="1881-S reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>C-6</dd>
+      <dt>Date and mint</dt><dd>1881-S &middot; San Francisco</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-63</dd>
+      <dt>Grade evidence</dt><dd>Full luster; clean fields.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20C-6%201881-S%20MS-63%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20C-6%0ADate%20and%20mint%3A%201881-S%20%28San%20Francisco%29%0AEstimated%20grade%3A%20MS-63%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="A" id="A-7">
+  <summary>
+    <img class="thumb" src="img/A-7-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set A &middot; Coin 7</span>
+      <span class="title">1900-P</span>
+      <span class="sub">Morgan Silver Dollar &middot; Philadelphia Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/A-7-obverse.jpg" data-cap="1900-P MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/A-7-obverse.jpg" alt="1900-P obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/A-7-reverse.jpg" data-cap="1900-P MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/A-7-reverse.jpg" alt="1900-P reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>A-7</dd>
+      <dt>Date and mint</dt><dd>1900-P &middot; Philadelphia</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>Sharp hair detail and full breast feathers on both sides; luster unbroken.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20A-7%201900-P%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20A-7%0ADate%20and%20mint%3A%201900-P%20%28Philadelphia%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="A" id="A-16">
+  <summary>
+    <img class="thumb" src="img/A-16-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set A &middot; Coin 16</span>
+      <span class="title">1889-P</span>
+      <span class="sub">Morgan Silver Dollar &middot; Philadelphia Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/A-16-obverse.jpg" data-cap="1889-P MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/A-16-obverse.jpg" alt="1889-P obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/A-16-reverse.jpg" data-cap="1889-P MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/A-16-reverse.jpg" alt="1889-P reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>A-16</dd>
+      <dt>Date and mint</dt><dd>1889-P &middot; Philadelphia</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>Strong detail on both sides; full luster.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20A-16%201889-P%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20A-16%0ADate%20and%20mint%3A%201889-P%20%28Philadelphia%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="A" id="A-18">
+  <summary>
+    <img class="thumb" src="img/A-18-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set A &middot; Coin 18</span>
+      <span class="title">1881-S</span>
+      <span class="sub">Morgan Silver Dollar &middot; San Francisco Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/A-18-obverse.jpg" data-cap="1881-S MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/A-18-obverse.jpg" alt="1881-S obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/A-18-reverse.jpg" data-cap="1881-S MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/A-18-reverse.jpg" alt="1881-S reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>A-18</dd>
+      <dt>Date and mint</dt><dd>1881-S &middot; San Francisco</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>Bright mirror fields; hair and feather detail complete.</dd>
+    </dl>
+    <p class="note">Mirror fields: PCGS Prooflike (PL) check requested at grading.</p>
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20A-18%201881-S%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20A-18%0ADate%20and%20mint%3A%201881-S%20%28San%20Francisco%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="A" id="A-22">
+  <summary>
+    <img class="thumb" src="img/A-22-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set A &middot; Coin 22</span>
+      <span class="title">1881-S</span>
+      <span class="sub">Morgan Silver Dollar &middot; San Francisco Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/A-22-obverse.jpg" data-cap="1881-S MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/A-22-obverse.jpg" alt="1881-S obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/A-22-reverse.jpg" data-cap="1881-S MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/A-22-reverse.jpg" alt="1881-S reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>A-22</dd>
+      <dt>Date and mint</dt><dd>1881-S &middot; San Francisco</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>Full breast feathers; bright fields.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20A-22%201881-S%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20A-22%0ADate%20and%20mint%3A%201881-S%20%28San%20Francisco%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="A" id="A-24">
+  <summary>
+    <img class="thumb" src="img/A-24-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set A &middot; Coin 24</span>
+      <span class="title">1879-O</span>
+      <span class="sub">Morgan Silver Dollar &middot; New Orleans Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/A-24-obverse.jpg" data-cap="1879-O MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/A-24-obverse.jpg" alt="1879-O obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/A-24-reverse.jpg" data-cap="1879-O MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/A-24-reverse.jpg" alt="1879-O reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>A-24</dd>
+      <dt>Date and mint</dt><dd>1879-O &middot; New Orleans</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>Strong hair detail; full breast and wing feathers.</dd>
+    </dl>
+    <p class="note">Dark marks near the rim are on the holder plastic.</p>
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20A-24%201879-O%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20A-24%0ADate%20and%20mint%3A%201879-O%20%28New%20Orleans%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="A" id="A-27">
+  <summary>
+    <img class="thumb" src="img/A-27-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set A &middot; Coin 27</span>
+      <span class="title">1883-P</span>
+      <span class="sub">Morgan Silver Dollar &middot; Philadelphia Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/A-27-obverse.jpg" data-cap="1883-P MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/A-27-obverse.jpg" alt="1883-P obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/A-27-reverse.jpg" data-cap="1883-P MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/A-27-reverse.jpg" alt="1883-P reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>A-27</dd>
+      <dt>Date and mint</dt><dd>1883-P &middot; Philadelphia</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>Fine hair detail throughout; frosty luster.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20A-27%201883-P%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20A-27%0ADate%20and%20mint%3A%201883-P%20%28Philadelphia%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="B" id="B-2">
+  <summary>
+    <img class="thumb" src="img/B-2-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set B &middot; Coin 2</span>
+      <span class="title">1890-P</span>
+      <span class="sub">Morgan Silver Dollar &middot; Philadelphia Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/B-2-obverse.jpg" data-cap="1890-P MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/B-2-obverse.jpg" alt="1890-P obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/B-2-reverse.jpg" data-cap="1890-P MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/B-2-reverse.jpg" alt="1890-P reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>B-2</dd>
+      <dt>Date and mint</dt><dd>1890-P &middot; Philadelphia</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>Bright surfaces; no wear on the high points.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20B-2%201890-P%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20B-2%0ADate%20and%20mint%3A%201890-P%20%28Philadelphia%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="C" id="C-3">
+  <summary>
+    <img class="thumb" src="img/C-3-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set C &middot; Coin 3</span>
+      <span class="title">1887-O</span>
+      <span class="sub">Morgan Silver Dollar &middot; New Orleans Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/C-3-obverse.jpg" data-cap="1887-O MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/C-3-obverse.jpg" alt="1887-O obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/C-3-reverse.jpg" data-cap="1887-O MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/C-3-reverse.jpg" alt="1887-O reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>C-3</dd>
+      <dt>Date and mint</dt><dd>1887-O &middot; New Orleans</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>No wear on the high points; scattered marks.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20C-3%201887-O%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20C-3%0ADate%20and%20mint%3A%201887-O%20%28New%20Orleans%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+<details class="coin" data-grade="62" data-set="C" id="C-5">
+  <summary>
+    <img class="thumb" src="img/C-5-obverse.jpg" alt="" loading="lazy">
+    <span class="head"><span class="kicker">Set C &middot; Coin 5</span>
+      <span class="title">1885-O</span>
+      <span class="sub">Morgan Silver Dollar &middot; New Orleans Mint</span></span>
+    <span class="grade"><span class="glabel">Grade</span>MS-62</span>
+    <span class="chev" aria-hidden="true"></span>
+  </summary>
+  <div class="body">
+    <div class="photos"><figure><button class="zoom" data-src="img/C-5-obverse.jpg" data-cap="1885-O MS-62 - Obverse" aria-label="Enlarge obverse"><img src="img/C-5-obverse.jpg" alt="1885-O obverse" loading="lazy"></button><figcaption>Obverse</figcaption></figure><figure><button class="zoom" data-src="img/C-5-reverse.jpg" data-cap="1885-O MS-62 - Reverse" aria-label="Enlarge reverse"><img src="img/C-5-reverse.jpg" alt="1885-O reverse" loading="lazy"></button><figcaption>Reverse</figcaption></figure></div>
+    <dl>
+      <dt>Coin code</dt><dd>C-5</dd>
+      <dt>Date and mint</dt><dd>1885-O &middot; New Orleans</dd>
+      <dt>Type</dt><dd>Morgan Silver Dollar</dd>
+      <dt>Estimated grade</dt><dd class="g">MS-62</dd>
+      <dt>Grade evidence</dt><dd>No wear on the high points; scattered marks.</dd>
+    </dl>
+    
+    <a class="email" href="mailto:jquin1122@gmail.com?subject=Price%20request%3A%20C-5%201885-O%20MS-62%20Morgan%20Silver%20Dollar&body=Hello%2C%0A%0AI%20am%20interested%20in%20this%20coin%3A%0A%0ACoin%3A%20C-5%0ADate%20and%20mint%3A%201885-O%20%28New%20Orleans%29%0AEstimated%20grade%3A%20MS-62%0A%0APlease%20send%20me%20your%20current%20price%20for%20this%20coin.%0A%0AName%3A%0APhone%3A%0A"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>Email for current price</a>
+  </div>
+</details>
+</div></main>
+<footer>Grades are estimates. Prices on request: <a href="mailto:jquin1122@gmail.com">jquin1122@gmail.com</a></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged photo"><button aria-label="Close">&times;</button><img alt=""><p></p></div>
+<script>
+const coins=[...document.querySelectorAll('.coin')];
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  coins.forEach(c=>c.hidden=!(b.dataset.f==='all'||c.dataset.grade===b.dataset.f));
+});
+const t=document.getElementById('toggle');
+t.onclick=()=>{const open=t.textContent==='Expand all';coins.forEach(c=>{if(!c.hidden)c.open=open});t.textContent=open?'Collapse all':'Expand all'};
+const lb=document.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');
+document.querySelectorAll('.zoom').forEach(z=>z.onclick=()=>{li.src=z.dataset.src;lp.textContent=z.dataset.cap;lb.classList.add('on')});
+lb.onclick=e=>{if(e.target!==li)lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
